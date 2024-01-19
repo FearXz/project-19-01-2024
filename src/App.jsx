@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import MySideBar from "./components/MySideBar";
 import MyMain from "./components/MyMain";
+import Player from "./components/Player";
 
 function App() {
   return (
@@ -13,12 +14,15 @@ function App() {
         <Route
           path="/"
           element={
-            <Container fluid>
-              <Row>
-                <MySideBar />
-                <MyMain />
-              </Row>
-            </Container>
+            <>
+              <Container fluid>
+                <Row>
+                  <MySideBar />
+                  <MyMain />
+                </Row>
+              </Container>
+              <Player />
+            </>
           }
         />
       </Routes>
