@@ -15,7 +15,7 @@ function App() {
           path="/"
           element={
             <>
-              <Container fluid>
+              <Container fluid className=" mb-5">
                 <Row>
                   <MySideBar />
                   <MyMain />

@@ -51,11 +51,11 @@ non vedo un motivo per non metterla direttamente nel componente  */
       </Row>
       {searchedQuery && <SearchResult category="Search Result" songsInfo={searchedQuery} />}
       {fetchedData && fetchedData.queen && fetchedData.katyperry && fetchedData.eminem && (
-        <>
+        <div className=" mb-5">
           <Gallery category={"Rock Classics"} songsInfo={fetchedData.queen} />
           <Gallery category={"Pop Culture"} songsInfo={fetchedData.katyperry} />
-          <Gallery category={"#HipHop"} songsInfo={fetchedData.eminem} />
-        </>
+          <Gallery category={"#HipHop"} songsInfo={fetchedData.eminem} className=" mb-5" />
+        </div>
       )}
     </Col>
   );
