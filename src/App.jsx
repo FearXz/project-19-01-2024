@@ -7,6 +7,7 @@ import MySideBar from "./components/MySideBar";
 import MyMain from "./components/MyMain";
 import Player from "./components/Player";
 import MyPlaylist from "./components/MyPlaylist";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             </>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
