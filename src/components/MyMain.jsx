@@ -9,8 +9,7 @@ function MyMain() {
   const [fetchedData, setFetchedData] = useState(null);
   const searchedQuery = useSelector((state) => state.global.searchResult);
 
-  /* questa fetch è locale al componente e non deve condividere il suo oggetto fetchato con nessun altro componente,
-non vedo un motivo per non metterla direttamente nel componente  */
+  /* questa fetch è locale al componente e non deve condividere il suo oggetto fetchato con nessun altro componente  */
 
   const handleSection = async (artistName) => {
     try {
