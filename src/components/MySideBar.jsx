@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, InputGroup, Nav, Navbar } from "react-boo
 import logo from "../assets/logo/logo.png";
 import { useDispatch } from "react-redux";
 import { fetchSearch } from "../redux/actions/actions";
-import { setSearchResult } from "../redux/reducers/stateReducer";
+import { setLoadedSong, setSearchResult } from "../redux/reducers/stateReducer";
 
 function MySideBar() {
   const [query, setQuery] = useState("");
@@ -13,12 +13,16 @@ function MySideBar() {
     e.preventDefault();
     dispatch(fetchSearch(query));
   }
+  function handleClickLogo() {
+    dispatch(setSearchResult(null));
+    dispatch(setLoadedSong(null));
+  }
 
   return (
     <Col xs={2}>
       <Navbar expand="md" fixed="left" className="justify-content-between" id="sidebar">
         <Container className="flex-column align-items-start">
-          <Navbar.Brand href="#" onClick={() => dispatch(setSearchResult(null))}>
+          <Navbar.Brand href="#" onClick={handleClickLogo}>
             <img src={logo} alt="Spotify Logo" width="131" height="40" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" />

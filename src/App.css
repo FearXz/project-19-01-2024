@@ -125,6 +125,9 @@ ul {
     margin-right: 25%;
   }
 }
+.player-image {
+  width: 80px;
+}
 
 /*MAIN PAGE SECTION*/
 .MyImgWrapper {

@@ -28,5 +28,5 @@ const stateReducerSlice = createSlice({
 });
 
 // Esporto solo l'azione definita nello slice
-export const { setSearchResult, setFavourite } = stateReducerSlice.actions;
+export const { setSearchResult, setFavourite, setLoadedSong } = stateReducerSlice.actions;
 export default stateReducerSlice.reducer;
