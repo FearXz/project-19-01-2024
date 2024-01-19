@@ -4,6 +4,7 @@ import logo from "../assets/logo/logo.png";
 import { useDispatch } from "react-redux";
 import { fetchSearch } from "../redux/actions/actions";
 import { setLoadedSong, setSearchResult } from "../redux/reducers/stateReducer";
+import { persistor } from "../redux/store/store";
 
 function MySideBar() {
   const [query, setQuery] = useState("");

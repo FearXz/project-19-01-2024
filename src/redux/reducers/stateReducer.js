@@ -22,11 +22,11 @@ const stateReducerSlice = createSlice({
       state.favourite = [...state.favourite, action.payload];
     },
     removeFavourite: (state, action) => {
-      state.favourite = state.favourite.filter((song) => song.id !== action.payload);
+      state.favourite = state.favourite.filter((song) => song !== parseInt(action.payload));
     },
   },
 });
 
 // Esporto solo l'azione definita nello slice
-export const { setSearchResult, setFavourite, setLoadedSong } = stateReducerSlice.actions;
+export const { setSearchResult, addFavourite, removeFavourite, setLoadedSong } = stateReducerSlice.actions;
 export default stateReducerSlice.reducer;
