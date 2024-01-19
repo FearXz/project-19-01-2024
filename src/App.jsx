@@ -1,5 +1,6 @@
 import "./assets/css/mybootstrap.min.css";
 import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import MySideBar from "./components/MySideBar";
