@@ -19,6 +19,7 @@ function MySideBar() {
   function handleClickLogo() {
     dispatch(setSearchResult(null));
     dispatch(setLoadedSong(null));
+    navigate("/");
   }
 
   return (
@@ -33,7 +34,7 @@ function MySideBar() {
             <Nav className="navbar-nav">
               <ul>
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#" onClick={() => navigate("/")}>
+                  <a className="nav-item nav-link d-flex align-items-center" href="#" onClick={handleClickLogo}>
                     <i className="bi bi-house-door-fill"></i>&nbsp; Home
                   </a>
                 </li>
