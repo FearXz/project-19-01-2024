@@ -9,7 +9,7 @@ function Card(props) {
   const dispatch = useDispatch();
 
   return (
-    <div className="col text-center " id={props.songInfo.id}>
+    <div className="col text-center d-flex justify-content-center " id={props.songInfo.id}>
       <div className="position-relative MyImgWrapper">
         <img className="img-fluid" src={props.songInfo.album.cover_medium} alt="track" />
         <i

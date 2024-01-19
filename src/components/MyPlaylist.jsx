@@ -10,8 +10,8 @@ function MyPlaylist() {
     <Container fluid>
       {songsInfo && (
         <Row className="">
-          <Col xs={3}></Col>
-          <Col xs={9}>
+          <Col xs={0} md={3}></Col>
+          <Col xs={12} md={9}>
             <div id="rock">
               <h2 className=" text-center">My Playlist</h2>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection">

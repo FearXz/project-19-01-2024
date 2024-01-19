@@ -140,17 +140,16 @@ ul {
 }
 .MyImgWrapper .heart {
   left: 10px;
-  bottom: 50px;
+  bottom: 70px;
   cursor: pointer;
 }
 .MyImgWrapper .playlist {
   left: 10px;
-  top: 10px;
   cursor: pointer;
 }
 .MyImgWrapper .bi-play-circle-fill {
   right: 10px;
-  bottom: 50px;
+  bottom: 70px;
   cursor: pointer;
 }
 .mainLinks {
