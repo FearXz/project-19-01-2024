@@ -127,7 +127,14 @@ ul {
 }
 
 /*MAIN PAGE SECTION*/
-
+.MyImgWrapper {
+  max-width: 200px;
+}
+.MyImgWrapper i {
+  right: 30px;
+  bottom: 50px;
+  cursor: pointer;
+}
 .mainLinks {
   margin-top: 1.5rem;
   justify-content: space-evenly;
