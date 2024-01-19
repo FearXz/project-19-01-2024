@@ -5,8 +5,10 @@ import { useDispatch } from "react-redux";
 import { fetchSearch } from "../redux/actions/actions";
 import { setLoadedSong, setSearchResult } from "../redux/reducers/stateReducer";
 import { persistor } from "../redux/store/store";
+import { useNavigate } from "react-router-dom";
 
 function MySideBar() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
 
@@ -31,12 +33,16 @@ function MySideBar() {
             <Nav className="navbar-nav">
               <ul>
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#">
+                  <a className="nav-item nav-link d-flex align-items-center" href="#" onClick={() => navigate("/")}>
                     <i className="bi bi-house-door-fill"></i>&nbsp; Home
                   </a>
                 </li>
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#">
+                  <a
+                    className="nav-item nav-link d-flex align-items-center"
+                    href="#"
+                    onClick={() => navigate("/playlist")}
+                  >
                     <i className="bi bi-book-fill"></i>&nbsp; Your Library
                   </a>
                 </li>

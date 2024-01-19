@@ -130,6 +130,11 @@ ul {
 }
 
 /*MAIN PAGE SECTION*/
+.songText {
+  height: 50px;
+  overflow: hidden;
+}
+
 .MyImgWrapper {
   max-width: 200px;
 }

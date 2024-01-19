@@ -6,6 +6,7 @@ import { Container, Row } from "react-bootstrap";
 import MySideBar from "./components/MySideBar";
 import MyMain from "./components/MyMain";
 import Player from "./components/Player";
+import MyPlaylist from "./components/MyPlaylist";
 
 function App() {
   return (
@@ -19,6 +20,20 @@ function App() {
                 <Row>
                   <MySideBar />
                   <MyMain />
+                </Row>
+              </Container>
+              <Player />
+            </>
+          }
+        />
+        <Route
+          path="/playlist"
+          element={
+            <>
+              <Container fluid className=" mb-5">
+                <Row>
+                  <MySideBar />
+                  <MyPlaylist />
                 </Row>
               </Container>
               <Player />

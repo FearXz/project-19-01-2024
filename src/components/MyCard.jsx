@@ -39,7 +39,7 @@ function Card(props) {
           ></i>
         )}
 
-        <p>
+        <p className="songText">
           Track:{" "}
           {props.songInfo.title.length < 16 ? `${props.songInfo.title}` : `${props.songInfo.title.substring(0, 16)}...`}
           <br />
