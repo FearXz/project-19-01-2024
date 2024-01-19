@@ -1,34 +1,23 @@
 //slice asyc function
-/* import { fetchJobs } from "../reducers/job";
-export const fetchJobsAction = (url, query) => async (dispatch) => {
+import { setSearchResult } from "../reducers/stateReducer";
+export const fetchSearch = (searchQuery) => async (dispatch) => {
   try {
-    const response = await fetch(url + query + "&limit=20");
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + searchQuery, {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+        "X-RapidAPI-Key": "9d408f0366mshab3b0fd8e5ecdf7p1b09f2jsne682a1797fa0",
+      },
+    });
 
     if (response.ok) {
       const { data } = await response.json();
-      dispatch(fetchJobs(data));
+      dispatch(setSearchResult(data));
     } else {
+      dispatch(setSearchResult(null));
       throw new Error("Errore nel recupero dei risultati");
     }
   } catch (error) {
-    // Puoi gestire gli errori qui, se necessario
     console.error("Errore nel fetch:", error.message);
   }
 };
- */
-
-//vanilla async action
-/* export const FETCH_JOBS = "FETCH_JOBS";
-
-export const fetchJobsAction = (url, query) => async (dispatch) => {
-  try {
-    const response = await fetch(url + query + "&limit=20");
-
-    if (response.ok) {
-      const { data } = await response.json();
-      dispatch({ type: FETCH_JOBS, payload: data });
-    } else {
-      throw new Error("Errore nel recupero dei risultati");
-    }
-  } catch (error) {}
-}; */

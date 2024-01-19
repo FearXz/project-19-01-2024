@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  firstState: null,
+  searchResult: null,
 };
 
 const stateReducerSlice = createSlice({
@@ -10,14 +10,14 @@ const stateReducerSlice = createSlice({
   initialState,
   reducers: {
     // Azione definita nello slice
-    setFirstState: (state, action) => {
-      state.firstState = action.payload;
+    setSearchResult: (state, action) => {
+      state.searchResult = action.payload;
     },
   },
 });
 
 // Esporto solo l'azione definita nello slice
-export const { setFirstState } = stateReducerSlice.actions;
+export const { setSearchResult } = stateReducerSlice.actions;
 export default stateReducerSlice.reducer;
 
 //vanilla reducer

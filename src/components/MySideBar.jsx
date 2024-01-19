@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, InputGroup, Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo/logo.png";
+import { useDispatch } from "react-redux";
+import { fetchSearch } from "../redux/actions/actions";
 
 function MySideBar() {
+  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    dispatch(fetchSearch(query));
+  }
+
   return (
     <Col xs={2}>
       <Navbar expand="md" fixed="left" className="justify-content-between" id="sidebar">
@@ -25,13 +35,15 @@ function MySideBar() {
                   </a>
                 </li>
                 <li>
-                  <Form className="input-group mt-3">
+                  <Form onSubmit={handleSubmit} className="input-group mt-3">
                     <Form.Control
                       type="text"
                       id="searchField"
                       placeholder="Search"
                       aria-label="Search"
                       aria-describedby="basic-addon2"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
                     />
 
                     <Button variant="outline-secondary" className="h-100" type="submit">

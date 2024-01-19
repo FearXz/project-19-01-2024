@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import MyNavbar from "./MyNavbar";
 import Gallery from "./Gallery";
+import { useSelector } from "react-redux";
+import SearchResult from "./SearchResult";
 
 function MyMain() {
   const [fetchedData, setFetchedData] = useState(null);
+  const searchedQuery = useSelector((state) => state.global.searchResult);
 
   /* questa fetch è locale al componente e non deve condividere il suo oggetto fetchato con nessun altro componente,
 non vedo un motivo per non metterla direttamente nel componente  */
@@ -46,6 +49,7 @@ non vedo un motivo per non metterla direttamente nel componente  */
           </div>
         </Col>
       </Row>
+      {searchedQuery && <SearchResult category="Search Result" songsInfo={searchedQuery} />}
       {fetchedData && fetchedData.queen && fetchedData.katyperry && fetchedData.eminem && (
         <>
           <Gallery category={"Rock Classics"} songsInfo={fetchedData.queen} />
