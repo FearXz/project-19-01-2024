@@ -134,12 +134,17 @@ ul {
   max-width: 200px;
 }
 .MyImgWrapper .heart {
-  left: 30px;
+  left: 10px;
   bottom: 50px;
   cursor: pointer;
 }
+.MyImgWrapper .playlist {
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
 .MyImgWrapper .bi-play-circle-fill {
-  right: 30px;
+  right: 10px;
   bottom: 50px;
   cursor: pointer;
 }

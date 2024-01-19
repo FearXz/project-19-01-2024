@@ -5,6 +5,7 @@ const initialState = {
   searchResult: null,
   loadedSong: null,
   favourite: [],
+  playlist: [],
 };
 
 const stateReducerSlice = createSlice({
@@ -24,9 +25,16 @@ const stateReducerSlice = createSlice({
     removeFavourite: (state, action) => {
       state.favourite = state.favourite.filter((song) => song !== parseInt(action.payload));
     },
+    addToPlaylist: (state, action) => {
+      state.playlist = [...state.playlist, action.payload];
+    },
+    removeFromPlaylist: (state, action) => {
+      state.playlist = state.playlist.filter((song) => song.id !== parseInt(action.payload.id));
+    },
   },
 });
 
 // Esporto solo l'azione definita nello slice
-export const { setSearchResult, addFavourite, removeFavourite, setLoadedSong } = stateReducerSlice.actions;
+export const { setSearchResult, addFavourite, removeFavourite, addToPlaylist, removeFromPlaylist, setLoadedSong } =
+  stateReducerSlice.actions;
 export default stateReducerSlice.reducer;
